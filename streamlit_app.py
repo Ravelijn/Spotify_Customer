@@ -1,9 +1,10 @@
 import streamlit as st 
 import streamlit.components.v1 as components 
+import pickle
 
 # load the saved model 
-pickle_in = open("fordeploy.pkl","rb")
-model=pickle.load(pickle_in)
+#pickle_in = open("fordeploy.pkl","rb")
+model=pickle.load(open('fordeploy.pkl','rb'))
 
 
 def predict_popu(acousticness,danceability,duration_ms,energy,loudness,speechiness,valence):
